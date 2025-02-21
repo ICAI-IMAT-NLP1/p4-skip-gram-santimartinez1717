@@ -134,7 +134,7 @@ def test_cosine_similarity():
     # Call the cosine_similarity function
     valid_size = 16  # Number of validation examples
     valid_window = 100  # Window of validation examples
-    valid_examples, similarities = cosine_similarity(embedding, valid_size=valid_size, valid_window=valid_window, device='cpu')
+    valid_examples, similarities = cosine_similarity(embedding, valid_size=valid_size, valid_window=valid_window, device="mps")
 
     if valid_examples is None or similarities is None:
         pytest.skip()
